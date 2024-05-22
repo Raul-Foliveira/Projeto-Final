@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+  </head>
+<body>
+  <div class="login">
+  <h1>Flix</h1>
+  <h2 style="color: white;">Login</h2>
+    <form action="/login" method="POST">
+      <div>
+      <label style="color: white;" for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label style="color: white;" for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Entrar</button>
+        
+    </form>
+    <a href="./sucesso.html" style="margin:10px 0px 0px 0px; text-decoration: none;" class="btn btn-primary btn-block btn-large">Cadastrar</a>
+  </div>
+
+</body>
+</html>
