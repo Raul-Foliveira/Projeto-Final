@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 const PORT = 3000;
+const PORT2 = 8080;
 const filmes = require('./filmes.json');
 
 app.use(bodyParser.json());
@@ -39,6 +40,10 @@ app.listen(PORT, () =>{
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
 
+app.listen(PORT2, () =>{
+    console.log(`Servidor rodando em http://localhost:${PORT2}`);
+});
+
 app.get('/sucesso', (req, res)=> {
     res.sendFile(path.join(__dirname,'public', 'sucesso.html'));
 });
@@ -54,6 +59,23 @@ app.post('/sucesso', (req,res) => {
 
     usuarios.push(novo);
     res.redirect('/login.html');
+});
+
+
+// Definição da porta em que o servidor irá ouvir
+
+// Configuração do middleware CORS para permitir solicitações de diferentes origens
+
+// Definição do middleware para servir arquivos estáticos
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Definição da rota para os filmes
+app.get('/filmes', (req, res) => {
+    res.json(filmes); // Retorna os dados dos filmes como uma resposta JSON
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 
