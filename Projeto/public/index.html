@@ -293,11 +293,12 @@
                 data.forEach(filme => {
                     const videoElement = `
                         <div>
-                            <img src="${filme.image}" alt="${filme.title}" width="100%" />
+                            <a href="${filme.id}"> <img src="${filme.image}" alt="${filme.title}" width="100%" /> </a>
                             <section>
                                 <div>
                                     <p>${filme.title}</p>
                                     <small>${filme.genre.join(', ')}</small><br />
+                                  <a href="${filme.id}" > <small> Veja mais </small> </a>
                                 </div>
                             </section>
                         </div>

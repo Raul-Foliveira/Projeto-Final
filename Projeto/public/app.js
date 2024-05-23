@@ -8,8 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 filmeDiv.classList.add('filme');
                 filmeDiv.innerHTML = `
                     <h2>${filme.nome}</h2>
-                    <img src="${filme.foto}" alt="Imagem de ${filme.titulo}" style="width: 200px; height: auto;">
+                    
+                        <img src="${filme.foto}" alt="Imagem de ${filme.titulo}"  style="width: 200px; height: auto;">  
+                     
+                    
                     <p>${filme.descricao}</p>
+                   
                 `;
                 container.appendChild(filmeDiv);
             });
