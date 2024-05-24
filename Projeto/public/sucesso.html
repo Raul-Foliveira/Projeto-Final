@@ -9,11 +9,19 @@
 </head>
 
 <body>
+ 
+    <header-component class="flex-header"></header-component>
+
+    <script src="HeaderComponent.js"></script>
+
+    
     <div class="container">
         <a class="links" id="paracadastro"></a>
         <a class="links" id="paralogin"></a>
+        
 
         <div class="content">
+            
             <div id="cadastro">
                 <h2>Cadastrar usuario</h2>
                 <form action="/sucesso" method="POST">
@@ -29,11 +37,11 @@
                         <label for="senha_cad">Senha:</label>
                         <input type="password" id="senha" name="senha" required>
                     </div>
-                    <button type="submit">Cadastrar</button>
+                    <button class="btn-cadastro"type="submit">Cadastrar</button>
 
                     <p class="link">
                         Já tem conta?
-                        <a href="login.html"> Ir para Login </a>
+                        <a href="login.html"> Ir para Login</a>
                     </p>
 
                 </form>
@@ -42,7 +50,13 @@
     </div>
 
 
-
+    <div class="footer">
+        Descubra tudo sobre seus filmes e séries favoritos com a InfoFLIX – sua fonte definitiva de informação e entretenimento!
+      </div>
+    
+      <div class="footer2">
+        2024 Infoflix. Todos os direitos reservados.
+      </div>
 
 </body>
 

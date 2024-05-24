@@ -5,7 +5,7 @@
   }
   
   body{
-    margin:10%;
+    margin:0%;
     background-color: black;
   }
   
@@ -18,7 +18,47 @@
     display: none;
   }
   
+  .flex-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+  
  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 70px); /* Altura da página menos a altura do header */
+    background-color: #f4f4f4;
+}
+
+.footer {
+	font-family:"DM Sans", sans-serif;
+	font-size: 17px;
+	color: white;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #000000;
+	text-align: center;
+	padding: 30px 0;
+}
+.footer2 {
+	font-family:"DM Sans", sans-serif;
+	font-size: 15px;
+	color: white;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: transparent;
+	text-align: center;
+	padding: 10px 0;
+}
+
   .content{
     width: 500px;
     margin: 0px auto;
@@ -52,8 +92,19 @@
     margin: 0px;
   }
   label{
-    color: #405c60;
+    color: #ffffff;
     position: relative;
+  }
+  .btn-cadastro {
+    background-color: #ff0404;
+    color: #fff;
+    margin: 3% 0% 0% 75%;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
   }
   
   /**** advanced input styling ****/
@@ -111,16 +162,16 @@
   /*marcando os links para mudar de um formulário para outro */
   .link{
     position: absolute;
-    background: #e1eaeb;
-    color: #7f7c7c;
+    background: rgb(65, 64, 64);
+    color: #ffffff;
     left: 0px;
     height: 20px;
     width: 440px;
-    padding: 17px 30px 20px 30px;
+    padding: 17px 30px 0px 30px;
     font-size: 16px;
     text-align: right;
-    border-top: 1px solid #dbe5e8;
-  
+    border-top: 1px solid #ffffff;
+    
     -webkit-border-radius: 0 0  5px 5px;
     border-radius: 0 0  5px 5px;
   }
@@ -128,7 +179,7 @@
     font-weight: bold;
     background: #f7f8f1;
     padding: 6px;
-    color: rgb(29, 162, 193);
+    color: rgb(0, 0, 0);
     margin-left: 10px;
     border: 1px solid #cbd518;
   
@@ -139,9 +190,9 @@
     transition: all 0.4s  linear;
   }
   .link a:hover {
-    color: #39bfd7;
+    color: #ff0202a4;
     background: #f7f7f7;
-    border: 1px solid #4ab3c6;
+    border: 1px solid #ffffff;
   }
   
   /* estilos para para ambos os formulários */
@@ -152,8 +203,10 @@
     width: 88%;	
     padding: 18px 6% 60px 6%;
     margin: 0 0 35px 0;
-    background: rgb(247, 247, 247);
-    border: 1px solid rgba(147, 184, 189,0.8);
+    background: rgb(65, 64, 64);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: white;
+    
     
     -webkit-box-shadow: 5px;
     border-radius: 5px;
@@ -181,6 +234,96 @@
     -webkit-animation-name: fadeOutLeft;
     animation-name: fadeOutLeft;
   }
+
+  .brand {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+    
+    }
+    .brand:before {
+    font-family: "Bebas Neue", sans-serif;
+    background-size: 100% 100%;
+    content: "InfoFLIX";
+    line-height: 205px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 99999 !important;
+    }
+    
+    .logo{
+    animation: 5s linear infinite;
+    animation-name: rotate-0;
+    animation-delay: 0s;
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+    
+    }
+    
+    svg path{
+    position:absolute;
+    fill:none;
+    stroke-width:2;
+    top:0;
+    left:0;
+    /*mix-blend-mode: multiply;*/
+    transform-origin: 50% 50%;
+    transform: rotate(0deg) ;
+    animation: 4s linear infinite;
+    }
+    
+    .logo svg path:nth-child(1) {
+    opacity: 1;
+    animation-name: rotate-1;
+    animation-delay: .5s;
+    }
+    .logo svg path:nth-child(2) {
+    opacity: .5;
+    animation-name: rotate-2;
+    animation-delay: .6s;
+    }
+    .logo svg path:nth-child(3) {
+    opacity: .8;
+    animation-name: rotate-3;
+    animation-delay: .7s;
+    }
+
+    @keyframes scale-1 {
+      0%{
+        transform: scale(1);
+      }50% {
+        transform: scale(.9);
+      }100% {
+        transform: scale(1);
+      } 
+      }
+      
+      @keyframes rotate-0 {
+      from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      } 
+      
+      @keyframes rotate-1 {
+      from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      
+      @keyframes rotate-2 {
+      from { transform: rotate(0deg); }
+        to { transform: rotate(-360deg); }
+      }
+      
+      @keyframes rotate-3 {
+      from { transform: rotate(0deg); }
+        to { transform: rotate(0deg); }
+      }
   
   /*fadeInLeft*/
   @-webkit-keyframes fadeInLeft {

@@ -36,7 +36,12 @@ h1 {
     font-weight: bold;
     transition: background-color 0.3s ease;
   }
-  
+  .flex-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
   .link-botao:hover {
     background-color: #0056b3;
   }
