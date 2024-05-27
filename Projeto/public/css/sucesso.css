@@ -129,6 +129,7 @@
   }
   
   input:not([type="checkbox"]){
+    color: white;
     width: 95%;
     margin-top: 8px;
     margin-bottom: 8px;
