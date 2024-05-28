@@ -3,8 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 const PORT = 3000;
-const PORT2 = 8080;
-const filmes = require('./filmes.json');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,7 +30,7 @@ app.post('/login', (req, res) => {
     const usuario = usuarios.find(u => u.email === email);
 
     if (!usuario || usuario.senha !== senha) {
-        return res.status(401).send('Credenciais inválidas');
+        return res.redirect('sucesso.html');
     }
 
     res.redirect('/index.html');
@@ -41,9 +40,7 @@ app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
 
-app.listen(PORT2, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT2}`);
-});
+
 
 app.get('/sucesso', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'sucesso.html'));
@@ -53,7 +50,7 @@ app.post('/sucesso', (req, res) => {
     const { nome, email, senha } = req.body;
 
     if (usuarios.some(u => u.email === email)) {
-        return res.status(400).send('Este email já existe');
+        return res.redirect('sucesso.html');
     }
     const id = usuarios.length + 1;
     const novo = { id, nome, email, senha };
