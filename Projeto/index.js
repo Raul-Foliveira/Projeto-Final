@@ -16,7 +16,8 @@ const usuarios = [
     { id: 1, nome: "Raul", email: 'raul@lindo.com', senha: '123' },
     { id: 2, nome: "leo", email: 'leo@teste.com', senha: '123' },
     { id: 3, nome: "ze", email: 'ze@teste.com', senha: '123455' },
-    { id: 4, nome: "ruela", email: 'ruela@teste.com', senha: '12345' }
+    { id: 4, nome: "ruela", email: 'ruela@teste.com', senha: '12345' },
+    { id: 5, nome: "luan", email: 'luan@teste.com', senha: '123'}
 ];
 
 app.get('/login', (req, res) => {

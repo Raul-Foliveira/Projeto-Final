@@ -241,7 +241,7 @@
                 font-family: "DM Sans", sans-serif;
                 font-size: 15px;
                 color: white;
-                position: fixed;
+                position: relative;
                 left: 0;
                 bottom: 0;
                 width: 100%;
@@ -284,10 +284,6 @@
         <header-component class="flex-header"></header-component>
 
     <script src="HeaderComponent.js"></script>
-        <div>   
-            <i class="fa-solid fa-house"></i>
-            <p>Home</p>
-        </div>
     </div>
     <div id="banner">
         <div id="videos">
@@ -316,7 +312,6 @@
                                 <div>
                                     <p>${filme.title}</p>
                                     <small>${filme.genre.join(', ')}</small><br />
-                                  <a href="${filme.id}" > <small> Veja mais </small> </a>
                                 </div>
                             </section>
                         </div>
