@@ -1,3 +1,8 @@
+nome: Raul florentino
+thiago souza
+luan da silva
+lucas noe 
+lionel oliveira
 ## Infolix - Desenvolvimento para WEB SERVICE
 Este projeto é um site que exibe informações sobre diversos filmes, facilitando a busca e descoberta de filmes para assistir.
 
